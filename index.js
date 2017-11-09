@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const user = require('./router/user');
+const list = require('./router/list');
 
 app.all('*',(req,res,next)=>{
 	res.header("Access-Control-Allow-Origin", "*");
@@ -10,6 +11,7 @@ app.all('*',(req,res,next)=>{
     next();
 })
 
+app.use('/list',list)
 app.use('/user',user)
 
 app.listen(300)

@@ -23,6 +23,7 @@
   "homepage": "https://github.com/axl-axl/demo#readme",
   "devDependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "flyio": "^0.2.6"
   }
 }
