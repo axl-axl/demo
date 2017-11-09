@@ -6,8 +6,13 @@ router.use(bodyPares.urlencoded({
 	extended:false
 }))
 
-router.get('/',(req,res)=>{
-	res.send('你好，我是user的主页')
+router.get('/:name?',(req,res)=>{
+	if(req.params.name){
+		res.send(req.params.name)
+	}else{
+		res.send('user')
+	}
+	// res.send('你好，我是user的主页')
 })
 
 router.post('/',(req,res)=>{
